@@ -8,7 +8,7 @@ node('centrosSlave') {
 '''
 }
     stage('run test') {
-        sh '''export APP_ENV="development" && export DOCKER_ACCT="eladstro" && docker compose up -d
+        sh '''export APP_ENV=development && export DOCKER_ACCT=eladstro && docker compose up -d
         '''
 }
 }
