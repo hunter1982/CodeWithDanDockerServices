@@ -3,7 +3,7 @@ node('centrosSlave') {
     checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/hunter1982/CodeWithDanDockerServices.git']]])
 }
     stage('build') {
-        sh '''export APP_ENV="development" && export DOCKER_ACCT="eladstro" && docker compose build
+        sh '''export APP_ENV=development && export DOCKER_ACCT=eladstro && docker compose build
 
 '''
 }
